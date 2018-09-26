@@ -30,7 +30,7 @@ public class Sorts {
 	
 	//Sorts the list of N elements contained in arr[0..N-1] using the quick sort algorithm with
  	//median-of-three pivot and rearrangement of the three elements
-	public static void quickSort(int[] int N) {
+	public static void quickSort(int[] arr, int N) {
 
 	}
 }
