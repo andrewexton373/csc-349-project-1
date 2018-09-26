@@ -4,8 +4,8 @@ public class Sorts {
 
 		// FOR every i starting with first and ending with pre-last position of the list
 		for (int i = 0; i < N - 1; i++) {
-			int min = Integer.MAX_VALUE;
-			int minIdx = 0;
+			int min = arr[i];
+			int minIdx = i;
 
 			// Find the minimum value in list[i .. length] and save its index in minIndex
 			for (int j = i; j < N; j++) {
