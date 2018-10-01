@@ -6,6 +6,42 @@ public class TestSorts {
         testSorts1();
         testSorts2();
         testSorts3();
+        testMergeSorts1();
+        testMergeSorts2();
+        testMergeSorts3();
+    }
+
+    public static void testMergeSorts1() {
+        int[] testArr1 = {1,3,2};
+        int[] sortedArr = {1,2,3};
+
+        System.out.println("TEST 1:");
+        System.out.print("MERGE SORT: ");
+        Sorts.mergeSort(testArr1, 3);
+        printIntArray(testArr1);
+        printPassOrFail(Arrays.equals(sortedArr, testArr1));
+    }
+
+    public static void testMergeSorts2() {
+        int[] testArr1 = {3,2,1};
+        int[] sortedArr = {1,2,3};
+
+        System.out.println("TEST 2:");
+        System.out.print("MERGE SORT: ");
+        Sorts.mergeSort(testArr1, 3);
+        printIntArray(testArr1);
+        printPassOrFail(Arrays.equals(sortedArr, testArr1));
+    }
+
+    public static void testMergeSorts3() {
+        int[] testArr1 = {10,3,2,6,11,1};
+        int[] sortedArr = {1,2,3,6,10,11};
+
+        System.out.println("TEST 3:");
+        System.out.print("MERGE SORT: ");
+        Sorts.mergeSort(testArr1, 6);
+        printIntArray(testArr1);
+        printPassOrFail(Arrays.equals(sortedArr, testArr1));
     }
 
     public static void testSorts1() {
