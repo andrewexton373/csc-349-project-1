@@ -3,13 +3,42 @@ import java.util.Arrays;
 
 public class SortTimes {
     public static void main(String[] args) {
-        int arraySize = 160000
-        int[] templateArray = generateRandomArrayOfSize(arraySize);
-        int[] array1 = Arrays.copyOf(templateArray, arraySize);
-        int[] array2 = Arrays.copyOf(templateArray, arraySize);
-        int[] array3 = Arrays.copyOf(templateArray, arraySize);
+        for (int size = 5000; size <= 160000; size*=2) {
+            int[] templateArray = generateRandomArrayOfSize(size);
+            runSortsAndPrintStats(templateArray, size);
+        }
+    }
 
+    private static void runSortsAndPrintStats(int[] arr, int size) {
+        int[] array1 = Arrays.copyOf(arr, size);
+        int[] array2 = Arrays.copyOf(arr, size);
+        int[] array3 = Arrays.copyOf(arr, size);
+        
+        long start, end, elapsedNS;
+        long selectionSortMS, mergeSortMS, quickSortMS;
 
+        start = System.nanoTime();
+        Sorts.selectionSort(array1, size);
+        end = System.nanoTime();
+        elapsedNS = end - start;
+        selectionSortMS = elapsedNS / 1000000;
+
+        start = System.nanoTime();
+        Sorts.mergeSort(array1, size);
+        end = System.nanoTime();
+        elapsedNS = end - start;
+        mergeSortMS = elapsedNS / 1000000;
+
+        start = System.nanoTime();
+        Sorts.quickSort(array1, size);
+        end = System.nanoTime();
+        elapsedNS = end - start;
+        quickSortMS = elapsedNS / 1000000;
+
+        System.out.println("N=" + size + 
+                            ": T_ss=" + selectionSortMS +
+                            ", T_ms=" + mergeSortMS +
+                            ", T_qs=" + quickSortMS);
     }
 
     private static int[] generateRandomArrayOfSize(int size) {
