@@ -9,36 +9,60 @@ public class TestSorts {
     }
 
     public static void testSorts1() {
-        int[] testArr1 = {1,3,2};
+        System.out.println("TEST 1:");
         int[] sortedArr = {1,2,3};
 
-        System.out.println("TEST 1:");
+        int[] testArr1 = {1,3,2};
         System.out.print("SELECTION SORT: ");
         Sorts.selectionSort(testArr1, 3);
         printIntArray(testArr1);
         printPassOrFail(Arrays.equals(sortedArr, testArr1));
+
+        int[] testArr3 = {1,3,2};
+        System.out.print("QUICK SORT: ");
+        Sorts.selectionSort(testArr3, 3);
+        printIntArray(testArr3);
+        printPassOrFail(Arrays.equals(sortedArr, testArr3));
+   
+        System.out.println("-----------\n");
     }
 
     public static void testSorts2() {
-        int[] testArr1 = {3,2,1};
+        System.out.println("TEST 2:");
         int[] sortedArr = {1,2,3};
 
-        System.out.println("TEST 2:");
+        int[] testArr1 = {3,2,1};
         System.out.print("SELECTION SORT: ");
         Sorts.selectionSort(testArr1, 3);
         printIntArray(testArr1);
         printPassOrFail(Arrays.equals(sortedArr, testArr1));
+
+        int[] testArr3 = {3,2,1};
+        System.out.print("QUICK SORT: ");
+        Sorts.selectionSort(testArr3, 3);
+        printIntArray(testArr3);
+        printPassOrFail(Arrays.equals(sortedArr, testArr3));
+
+        System.out.println("-----------\n");
     }
 
     public static void testSorts3() {
-        int[] testArr1 = {10,3,2,6,11,1};
+        System.out.println("TEST 3:");
         int[] sortedArr = {1,2,3,6,10,11};
 
-        System.out.println("TEST 3:");
+        int[] testArr1 = {10,3,2,6,11,1};
         System.out.print("SELECTION SORT: ");
         Sorts.selectionSort(testArr1, 6);
         printIntArray(testArr1);
         printPassOrFail(Arrays.equals(sortedArr, testArr1));
+
+        int[] testArr3 = {10,3,2,6,11,1};
+        System.out.print("QUICK SORT: ");
+        Sorts.selectionSort(testArr3, 6);
+        printIntArray(testArr3);
+        printPassOrFail(Arrays.equals(sortedArr, testArr3));
+
+        System.out.println("-----------\n");
     }
 
     public static void printIntArray(int[] arr) {
