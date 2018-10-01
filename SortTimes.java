@@ -1,11 +1,21 @@
+/*
+    Andrew Exton - aexton
+    Jett Moy -
+    October 1st, 2018
+    ALGORITHMS - Project 1
+*/
+
 import java.util.Random;
 import java.util.Arrays;
 
 public class SortTimes {
     public static void main(String[] args) {
         for (int size = 5000; size <= 160000; size*=2) {
-            int[] templateArray = generateRandomArrayOfSize(size);
-            runSortsAndPrintStats(templateArray, size);
+            for (int i = 1; i <= 5; i++) {
+                int[] templateArray = generateRandomArrayOfSize(size);
+                runSortsAndPrintStats(templateArray, size);
+            }
+            System.out.println();
         }
     }
 
@@ -36,9 +46,9 @@ public class SortTimes {
         quickSortMS = elapsedNS / 1000000;
 
         System.out.println("N=" + size + 
-                            ": T_ss=" + selectionSortMS +
-                            ", T_ms=" + mergeSortMS +
-                            ", T_qs=" + quickSortMS);
+                            ":  T_ss=" + selectionSortMS +
+                            ",  T_ms=" + mergeSortMS +
+                            ",  T_qs=" + quickSortMS);
     }
 
     private static int[] generateRandomArrayOfSize(int size) {

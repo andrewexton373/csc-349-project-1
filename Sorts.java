@@ -1,3 +1,10 @@
+/*
+    Andrew Exton - aexton
+    Jett Moy -
+    October 1st, 2018
+    ALGORITHMS - Project 1
+*/
+
 public class Sorts {
 	//Sorts the list of N elements contained in arr[0..N-1] using the selection sort algorithm.
 	public static void selectionSort(int[] arr, int N) {
