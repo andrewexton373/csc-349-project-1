@@ -50,26 +50,20 @@ public class Sorts {
 		// Compare leftmost and center elements
 		// If leftmost is greator than center element, SWAP
 		if (arr[left] > arr[center]) {
-			temp = arr[left];
-			arr[left] = arr[center];
-			arr[center] = temp;
+			swap(arr, left, center);
 		}
 
 		// Compare leftmost and rightmost elements
 		// If leftmost is greator than rightmost element, SWAP
 		if (arr[left] > arr[right]) {
-			temp = arr[left];
-			arr[left] = arr[right];
-			arr[right] = temp;
+			swap(arr, left, right);
 		}
 
 		// Compare center and rightmost elements
 		// If center is less than rightmost element, SWAP
 		// Make center greatest and rightmost median of 3 values
 		if (arr[center] < arr[right]) {
-			temp = arr[center];
-			arr[center] = arr[right];
-			arr[right] = temp;
+			swap(arr, center, right);
 		}
 
 	}
@@ -85,16 +79,18 @@ public class Sorts {
 			if (arr[indexL] < pivot) indexL++;
 			if (indexR > indexL && arr[indexR] > pivot) indexR--;
 			if (indexR > indexL) {
-				temp = arr[indexL];
-				arr[indexL++] = arr[indexR];
-				arr[indexR--] = temp;
+				swap(arr, indexL, indexR);
+				indexL++;
+				indexR--;
 			}
 		}
-
-		temp = arr[indexL];
-		arr[indexL] = arr[right];
-		arr[right] = temp;
-
+		swap(arr, indexL, right);
 		return indexL;
+	}
+
+	private static void swap(int[] arr, int a, int b) {
+		int temp = arr[a];
+		arr[a] = arr[b];
+		arr[b] = temp;
 	}
 }
