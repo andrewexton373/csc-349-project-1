@@ -1,10 +1,3 @@
-/*
-    Andrew Exton - aexton
-    Jett Moy -
-    October 1st, 2018
-    ALGORITHMS - Project 1
-*/
-
 public class Sorts {
 	//Sorts the list of N elements contained in arr[0..N-1] using the selection sort algorithm.
 	public static void selectionSort(int[] arr, int N) {
@@ -55,28 +48,34 @@ public class Sorts {
    //Precondition: arr[left..middle] is sorted; arr[(middle+1)..right] is sorted
    //Postcondition: arr[left..right] is sorted.
    private static void mergeSortedHalves (int[] arr, int left, int middle, int right) {
-      int[] temp = new int[right - left + 1];
-      int index1 = left;
+      int count = right - left + 1;
+      int[] temp = new int[count];
+      int index1 = left ;
       int index2 = middle + 1;
-      int index = left;
-      while (index1 < middle && index2 < right) {
+      int index = 0;
+
+      // While there are elements in the list find the smaller of the two elements and add it to the temporary array
+      while (index1 <= middle && index2 <= right) {
          if (arr[index1] < arr[index2])
             temp[index++] = arr[index1++];
          else
             temp[index++] = arr[index2++];
       }
 
-      while (index < index2) {
-         arr[index++] = temp[index1++];
+      // Fill the temporary array with the rest of the unfinished halves
+      while (index1 <= middle) {
+         temp[index++] = arr[index1++];
       }
 
-            //  Save the smaller of two halves’ indicated elements into the indicated cell of temp
+      while (index2 <= right) {
+         temp[index++] = arr[index2++];
+      }
 
-   //  Increment the index of appropriate half (the one that had smaller value)
-   //  Increment index of temp to point to the next cell
-   //  Copy all remaining elements of the un-finished half into the remaining cells of temp array
-   //  Copy all elements from temp array back into arr[left..right]
-   // Note: drawback of mergesort is the need to use a temp array (takes extra time to copy back).
+      // Copy temp back to arr
+      for (int i = 0; i < count; i++, left++) {
+         arr[left] = temp[i];
+      }
+
    }
 
 	//Sorts the list of N elements contained in arr[0..N-1] using the quick sort algorithm with
@@ -85,7 +84,7 @@ public class Sorts {
 		quickSort(arr, 0, N-1);
 	}
 
-	private static void quickSort(int[] arr, int first, int last) {		
+	private static void quickSort(int[] arr, int first, int last) {
 		if (first < last) { // check there's more than one element in the list
 			setPivotToEnd(arr, first, last);
 			int pivotIndex = splitList(arr, first, last);

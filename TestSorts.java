@@ -1,10 +1,3 @@
-/*
-    Andrew Exton - aexton
-    Jett Moy -
-    October 1st, 2018
-    ALGORITHMS - Project 1
-*/
-
 import java.util.Arrays;
 
 public class TestSorts {
@@ -13,42 +6,6 @@ public class TestSorts {
         testSorts1();
         testSorts2();
         testSorts3();
-        testMergeSorts1();
-        testMergeSorts2();
-        testMergeSorts3();
-    }
-
-    public static void testMergeSorts1() {
-        int[] testArr1 = {1,3,2};
-        int[] sortedArr = {1,2,3};
-
-        System.out.println("TEST 1:");
-        System.out.print("MERGE SORT: ");
-        Sorts.mergeSort(testArr1, 3);
-        printIntArray(testArr1);
-        printPassOrFail(Arrays.equals(sortedArr, testArr1));
-    }
-
-    public static void testMergeSorts2() {
-        int[] testArr1 = {3,2,1};
-        int[] sortedArr = {1,2,3};
-
-        System.out.println("TEST 2:");
-        System.out.print("MERGE SORT: ");
-        Sorts.mergeSort(testArr1, 3);
-        printIntArray(testArr1);
-        printPassOrFail(Arrays.equals(sortedArr, testArr1));
-    }
-
-    public static void testMergeSorts3() {
-        int[] testArr1 = {10,3,2,6,11,1};
-        int[] sortedArr = {1,2,3,6,10,11};
-
-        System.out.println("TEST 3:");
-        System.out.print("MERGE SORT: ");
-        Sorts.mergeSort(testArr1, 6);
-        printIntArray(testArr1);
-        printPassOrFail(Arrays.equals(sortedArr, testArr1));
     }
 
     public static void testSorts1() {
@@ -61,12 +18,17 @@ public class TestSorts {
         printIntArray(testArr1);
         printPassOrFail(Arrays.equals(sortedArr, testArr1));
 
-        int[] testArr3 = {1,3,2};
+        int[] testArr2 = {1,3,2};
         System.out.print("QUICK SORT: ");
-        Sorts.selectionSort(testArr3, 3);
+        Sorts.selectionSort(testArr2, 3);
+        printIntArray(testArr2);
+        printPassOrFail(Arrays.equals(sortedArr, testArr2));
+        int[] testArr3 = {1,3,2};
+        System.out.print("MERGE SORT: ");
+        Sorts.mergeSort(testArr3, 3);
         printIntArray(testArr3);
         printPassOrFail(Arrays.equals(sortedArr, testArr3));
-   
+
         System.out.println("-----------\n");
     }
 
@@ -80,9 +42,15 @@ public class TestSorts {
         printIntArray(testArr1);
         printPassOrFail(Arrays.equals(sortedArr, testArr1));
 
-        int[] testArr3 = {3,2,1};
+        int[] testArr2 = {3,2,1};
         System.out.print("QUICK SORT: ");
-        Sorts.selectionSort(testArr3, 3);
+        Sorts.selectionSort(testArr2, 3);
+        printIntArray(testArr2);
+        printPassOrFail(Arrays.equals(sortedArr, testArr2));
+
+        int[] testArr3 = {3,2,1};
+        System.out.print("MERGE SORT: ");
+        Sorts.mergeSort(testArr3, 3);
         printIntArray(testArr3);
         printPassOrFail(Arrays.equals(sortedArr, testArr3));
 
@@ -99,9 +67,15 @@ public class TestSorts {
         printIntArray(testArr1);
         printPassOrFail(Arrays.equals(sortedArr, testArr1));
 
-        int[] testArr3 = {10,3,2,6,11,1};
+        int[] testArr2 = {10,3,2,6,11,1};
         System.out.print("QUICK SORT: ");
-        Sorts.selectionSort(testArr3, 6);
+        Sorts.selectionSort(testArr2, 6);
+        printIntArray(testArr2);
+        printPassOrFail(Arrays.equals(sortedArr, testArr2));
+
+        int[] testArr3 = {10,3,2,6,11,1};
+        System.out.print("MERGE SORT: ");
+        Sorts.mergeSort(testArr3, 6);
         printIntArray(testArr3);
         printPassOrFail(Arrays.equals(sortedArr, testArr3));
 
