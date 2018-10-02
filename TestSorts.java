@@ -1,3 +1,10 @@
+/*
+    Andrew Exton - aexton
+    Jett Moy -
+    October 1st, 2018
+    ALGORITHMS - Project 1
+*/
+
 import java.util.Arrays;
 
 public class TestSorts {
