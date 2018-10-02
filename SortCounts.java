@@ -1,6 +1,6 @@
 /*
     Andrew Exton - aexton
-    Jett Moy -
+    Jett Moy - jlmoy
     October 1st, 2018
     ALGORITHMS - Project 1
 */
@@ -38,7 +38,7 @@ public class SortCounts {
         double msAvgComp = arrayAverage(msCountResults);
         double qsAvgComp = arrayAverage(qsCountResults);
 
-        System.out.println("N=" + size + 
+        System.out.println("N=" + size +
                             ":  C_ss=" + ssAvgComp +
                             ",  C_ms=" + msAvgComp +
                             ",  C_qs=" + qsAvgComp);

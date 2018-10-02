@@ -1,6 +1,6 @@
 /*
     Andrew Exton - aexton
-    Jett Moy -
+    Jett Moy - jlmoy
     October 1st, 2018
     ALGORITHMS - Project 1
 */
@@ -22,7 +22,7 @@ public class SortTimes {
         int[] array1 = Arrays.copyOf(arr, size);
         int[] array2 = Arrays.copyOf(arr, size);
         int[] array3 = Arrays.copyOf(arr, size);
-        
+
         long start, end, elapsedNS;
         long selectionSortMS, mergeSortMS, quickSortMS;
 
@@ -44,7 +44,7 @@ public class SortTimes {
         elapsedNS = end - start;
         quickSortMS = elapsedNS / 1000000;
 
-        System.out.println("N=" + size + 
+        System.out.println("N=" + size +
                             ":  T_ss=" + selectionSortMS +
                             ",  T_ms=" + mergeSortMS +
                             ",  T_qs=" + quickSortMS);

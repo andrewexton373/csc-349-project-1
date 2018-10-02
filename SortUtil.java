@@ -1,6 +1,6 @@
 /*
     Andrew Exton - aexton
-    Jett Moy -
+    Jett Moy - jlmoy
     October 1st, 2018
     ALGORITHMS - Project 1
 */
