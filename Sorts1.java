@@ -30,7 +30,7 @@ public class Sorts1 {
 					min = arr[j];
 					minIdx = j;
 				}
-                ssSteps++;
+                // ssSteps++;
 			}
 
 			// Swap the two elements at minIndex and i positions
@@ -99,7 +99,7 @@ public class Sorts1 {
 	//Sorts the list of N elements contained in arr[0..N-1] using the quick sort algorithm with
  	//median-of-three pivot and rearrangement of the three elements
 	public static long quickSort(int[] arr, int N) {
-       qsSteps = 0;
+       	qsSteps = 0;
 		quickSort(arr, 0, N-1);
         return qsSteps;
 	}
@@ -122,14 +122,14 @@ public class Sorts1 {
 		if (arr[left] > arr[center]) {
 			swap(arr, left, center);
 		}
-        qsSteps++;
+        // qsSteps++;
 
 		// Compare leftmost and rightmost elements
 		// If leftmost is greator than rightmost element, SWAP
 		if (arr[left] > arr[right]) {
 			swap(arr, left, right);
 		}
-        qsSteps++;
+        // qsSteps++;
 
 
 		// Compare center and rightmost elements
@@ -138,7 +138,7 @@ public class Sorts1 {
 		if (arr[center] < arr[right]) {
 			swap(arr, center, right);
 		}
-        qsSteps++;
+        // qsSteps++;
 
 
 	}

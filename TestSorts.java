@@ -6,6 +6,7 @@ public class TestSorts {
         testSorts1();
         testSorts2();
         testSorts3();
+        testSorts4();
     }
 
     public static void testSorts1() {
@@ -81,6 +82,33 @@ public class TestSorts {
 
         System.out.println("-----------\n");
     }
+
+
+    public static void testSorts4() {
+        System.out.println("TEST 4:");
+        int[] sortedArr = {0,1,2,3,4,5,6,7,8,9};
+
+        int[] testArr1 = {6,0,1,3,4,9,7,2,8,5};
+        System.out.print("SELECTION SORT: ");
+        Sorts.selectionSort(testArr1, testArr1.length);
+        printIntArray(testArr1);
+        printPassOrFail(Arrays.equals(sortedArr, testArr1));
+
+        int[] testArr2 = {6,0,1,3,4,9,7,2,8,5};
+        System.out.print("QUICK SORT: ");
+        Sorts.selectionSort(testArr2, testArr2.length);
+        printIntArray(testArr2);
+        printPassOrFail(Arrays.equals(sortedArr, testArr2));
+
+        int[] testArr3 = {6,0,1,3,4,9,7,2,8,5};
+        System.out.print("MERGE SORT: ");
+        Sorts.mergeSort(testArr3, testArr3.length);
+        printIntArray(testArr3);
+        printPassOrFail(Arrays.equals(sortedArr, testArr3));
+
+        System.out.println("-----------\n");
+    }
+
 
     public static void printIntArray(int[] arr) {
         System.out.print("ARRAY: ");
